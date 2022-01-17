@@ -51,5 +51,5 @@ prob = LinearVariationalProblem(a, L, u0, bcs=bcs)
 solver = LinearVariationalSolver(prob)
 
 solver.solve()
-file0 = File(name+'.pvd')
+file0 = File(name+'_'+str(n)+'.pvd')
 file0.write(u0)
