@@ -19,9 +19,7 @@ if problem == 1:
     a = inner(grad(v), grad(u))*dx
     L = 2*pi**2*sin(pi*x)*sin(pi*y)*v*dx
     bcs = [DirichletBC(V, 0., 1),
-           DirichletBC(V, 0., 2),
-           DirichletBC(V, 0., 3),
-           DirichletBC(V, 0., 4)]
+           DirichletBC(V, 0., 2)]
     name = 'vanilla'
 elif problem == 2:
     a = inner(grad(v), (2 + sin(2*pi*x))*grad(u))*dx
