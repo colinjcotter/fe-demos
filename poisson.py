@@ -17,7 +17,7 @@ x, y = SpatialCoordinate(mesh)
 
 if problem == 1:
     a = inner(grad(v), grad(u))*dx
-    L = 2*pi**2*sin(pi*x)*sin(pi*y)*v*dx
+    L = 2*pi**2*sin(pi*x)*sin(2*pi*y)*v*dx
     bcs = [DirichletBC(V, 0., 1),
            DirichletBC(V, 0., 2)]
     name = 'vanilla'
